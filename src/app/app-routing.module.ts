@@ -4,21 +4,35 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'order-preparing',
+    redirectTo: localStorage.getItem("isCompletTutorial") ?'order-preparing' : 'tutorail',
+   // redirectTo: 'tutorail',
     pathMatch: 'full'
-  },
-  {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
-  },
-  {
-    path: 'list',
-    loadChildren: () => import('./list/list.module').then(m => m.ListPageModule)
   },
   {
     path: 'order-preparing',
     loadChildren: () => import('./orderPreparing/orderPreparing.module').then(m => m.OrderPreparingModule)
+  },
+  {
+    path: 'about',
+    loadChildren: () => import('./about/about.module').then( m => m.AboutPageModule)
+  },
+  {
+    path: 'tutorail',
+    loadChildren: () => import('./tutorail/tutorail.module').then( m => m.TutorailPageModule)
+  },
+  {
+    path: 'my-support',
+    loadChildren: () => import('./my-support/my-support.module').then( m => m.MySupportPageModule)
+  },
+  {
+    path: 'my-profile',
+    loadChildren: () => import('./my-profile/my-profile.module').then( m => m.MyProfilePageModule)
+  },
+  {
+    path: 'my-photos',
+    loadChildren: () => import('./my-photos/my-photos.module').then( m => m.MyPhotosPageModule)
   }
+
 ];
 
 @NgModule({

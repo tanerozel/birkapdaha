@@ -1,8 +1,8 @@
 {
   "name": "bikapdaha",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "author": "Bir Kap Daha",
+  "homepage": "birkapdaha.com",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -54,5 +54,5 @@
     "tslint": "~5.15.0",
     "typescript": "~3.4.3"
   },
-  "description": "An Ionic project"
+  "description": "Bir Kap Daha"
 }
