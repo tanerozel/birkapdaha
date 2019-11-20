@@ -14,22 +14,22 @@ export class AppComponent {
     {
       title: 'Desteklerim',
       url: '/my-support',
-      icon: 'home'
+      icon: 'happy'
     },
     {
       title: 'Fotoğraflarım',
       url: '/my-photos',
-      icon: 'list'
+      icon: 'images'
     },
     {
       title: 'Profilim',
       url: '/my-profile',
-      icon: 'list'
+      icon: 'person'
     },
     {
       title: 'Hakkımızda',
       url: '/about',
-      icon: 'list'
+      icon: 'alert'
     }
     
     
