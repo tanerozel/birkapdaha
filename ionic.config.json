@@ -1,5 +1,7 @@
 {
   "name": "bikapdaha",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
