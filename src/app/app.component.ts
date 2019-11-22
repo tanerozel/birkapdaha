@@ -35,6 +35,11 @@ export class AppComponent {
       title: 'Tanıtım',
       url: '/tutorail',
       icon: 'alert'
+    },
+    {
+      title: 'Login',
+      url: '/login',
+      icon: 'alert'
     }
     
     
