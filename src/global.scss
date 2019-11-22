@@ -25,6 +25,12 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
+input  :active{
+ border:none !important;
+}
+input  :focus{
+  border:none !important;
+ }
 
   .swiper-container {
     top: 100px;
@@ -38,3 +44,11 @@
     margin-top : 200px;
   }
   
+  .toolbar-background {
+    opacity: 0 !important;
+}
+
+.button-native { 
+    color:white !important;
+}
+
