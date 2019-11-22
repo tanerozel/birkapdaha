@@ -1,36 +1,32 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
- 
-<ion-content class="ion-padding">
-  <ion-row>
-    <ion-col size="12" size-sm="10" offset-sm="1" size-md="8" offset-md="2" size-lg="6" offset-lg="3" size-xl="4"
-      offset-xl="4">
-      <ion-card>
-        <ion-card-header>
-          <ion-card-title class="ion-text-center">Bir Kap Daha</ion-card-title>
-        </ion-card-header>
-        <ion-card-content> 
-          <ion-item lines="none">
-            <ion-label position="stacked">E-Posta</ion-label>
-            <ion-input type="email" placeholder="eposta" name="email" ></ion-input>
-          </ion-item>
- 
-          <ion-item lines="none">
-            <ion-label position="stacked">Şifre</ion-label>
-            <ion-input type="password" placeholder="sifre" name="password" >
-            </ion-input>
-          </ion-item>
-          <ion-button (click)="login()" expand="block">Login</ion-button>
-          <ion-button expand="block" color="secondary" routerLink="/register" routerDirection="forward">Register
-          </ion-button>
- 
-        </ion-card-content>
-      </ion-card>
-    </ion-col>
-  </ion-row>
+<ion-content fullscreen padding scroll-y="false"> 
+    
+<ion-icon style="font-size: 50px;color: white;" (click)="home();" name="arrow-round-back"></ion-icon>
+
+<form action="/action_page.php" style="margin-top: 20%;" method="post">
+  <div class="imgcontainer">
+      <img src="../../assets/cat_dog.png" alt="Avatar" class="avatar">
+  </div>
+
+    <input type="text" placeholder="E-Posta" name="uname" required>
+
+    <input type="password" placeholder="Şifre" name="psw" required>       
+    <button type="submit">Giriş Yap</button>
+    <p style="text-align: center;">veya</p>
+    <button style="background-color:#3b5998" ion-button icon-start>
+        <ion-icon name="logo-facebook"></ion-icon>
+        Facebook
+      </button>
+      <button style="background-color:#DB4437" ion-button icon-start>
+          <ion-icon name="logo-google"></ion-icon>
+          Google
+        </button>
+   
+
+  
+
+  <div class="container">
+  <p style="text-align: center;">Üye olmadan devam et</p>
+    </div>
+</form>
+
 </ion-content>
