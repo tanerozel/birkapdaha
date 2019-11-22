@@ -9,7 +9,7 @@ export class TutorailPage implements OnInit {
 
   constructor(private route:Router) { }
   slideOpts = {
-    initialSlide: 1,
+    initialSlide: 0,
     speed: 400
   };
  
