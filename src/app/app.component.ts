@@ -30,6 +30,16 @@ export class AppComponent {
       title: 'Hakkımızda',
       url: '/about',
       icon: 'alert'
+    },
+    {
+      title: 'Tanıtım',
+      url: '/tutorail',
+      icon: 'alert'
+    },
+    {
+      title: 'Login',
+      url: '/login',
+      icon: 'alert'
     }
     
     

@@ -1,0 +1,32 @@
+<ion-content fullscreen padding scroll-y="false"> 
+    
+<ion-icon style="font-size: 50px;color: white;" (click)="home();" name="arrow-round-back"></ion-icon>
+
+<form action="/action_page.php" style="margin-top: 20%;" method="post">
+  <div class="imgcontainer">
+      <img src="../../assets/cat_dog.png" alt="Avatar" class="avatar">
+  </div>
+
+    <input type="text" placeholder="E-Posta" name="uname" required>
+
+    <input type="password" placeholder="Şifre" name="psw" required>       
+    <button type="submit">Giriş Yap</button>
+    <p style="text-align: center;">veya</p>
+    <button style="background-color:#3b5998" ion-button icon-start>
+        <ion-icon name="logo-facebook"></ion-icon>
+        Facebook
+      </button>
+      <button style="background-color:#DB4437" ion-button icon-start>
+          <ion-icon name="logo-google"></ion-icon>
+          Google
+        </button>
+   
+
+  
+
+  <div class="container">
+  <p style="text-align: center;">Üye olmadan devam et</p>
+    </div>
+</form>
+
+</ion-content>

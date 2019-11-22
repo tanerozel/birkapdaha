@@ -8,7 +8,19 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {Firbaseconfig }  from './firbaseconfig.enum';
+
+// Firebase App (the core Firebase SDK) is always required and must be listed first
+import * as firebase from "firebase";
+
+ firebase.initializeApp(Firbaseconfig);
+//  firebase.auth().createUserWithEmailAndPassword("cemcakmaci@gmail.com", "2321011").catch(function(error) {
+//   Handle Errors here.
+//   var errorCode = error.code;
+//   var errorMessage = error.message;
+//   debugger;
+//   ...
+// });
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,13 +28,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
-    AppRoutingModule,
-    BrowserAnimationsModule
+    AppRoutingModule
   ],
   providers: [
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    
   ],
   bootstrap: [AppComponent]
 })

@@ -1,19 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
+
 @Component({
-  selector: 'app-tutorail',
-  templateUrl: './tutorail.page.html',
-  styleUrls: ['./tutorail.page.scss'],
+  selector: 'app-login',
+  templateUrl: './login.page.html',
+  styleUrls: ['./login.page.scss'],
 })
-export class TutorailPage implements OnInit {
+export class LoginPage implements OnInit {
 
   constructor(private route:Router) { }
-  slideOpts = {
-    initialSlide: 0,
-    speed: 400
-  };
- 
-  continue(){
+
+  home(){
     localStorage.setItem("isCompletTutorial","true")
     this.route.navigateByUrl("/order-preparing");
   }

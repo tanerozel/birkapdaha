@@ -64,6 +64,7 @@ export class OrderPreparing implements OnInit {
     });
     await actionSheet.present();
   }
+  
 
   ngOnInit() {
     
