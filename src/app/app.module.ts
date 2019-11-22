@@ -13,7 +13,8 @@ import {Firbaseconfig }  from './firbaseconfig.enum';
 // Firebase App (the core Firebase SDK) is always required and must be listed first
 import * as firebase from "firebase";
 
- firebase.initializeApp(Firbaseconfig);
+// firebase.initializeApp(Firbaseconfig);
+
 //  firebase.auth().createUserWithEmailAndPassword("cemcakmaci@gmail.com", "2321011").catch(function(error) {
 //   Handle Errors here.
 //   var errorCode = error.code;
@@ -21,6 +22,22 @@ import * as firebase from "firebase";
 //   debugger;
 //   ...
 // });
+
+// firebase.auth().signInWithEmailAndPassword("cemcakmaci@gmail.com", "2321011").then(function(result) {
+//   Handle Errors here.
+//    console.log(result);
+//   debugger;
+//   ...
+// })
+// .catch(function(error) {
+//   Handle Errors here.
+//   var errorCode = error.code;
+//   var errorMessage = error.message;
+
+//   debugger;
+//   ...
+// });
+
 
 @NgModule({
   declarations: [AppComponent],
