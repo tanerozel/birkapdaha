@@ -1,1 +1,73 @@
+ion-content{
+    --background: #fff url('../../assets/map.png') no-repeat center center / cover;
+}
 
+
+.orderpage{
+    position: relative;
+    display: block;
+    span{
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      z-index: 5;
+      text-align: center;
+      color: #FFF;
+      background: #000000;
+      border-radius: 50%;
+      &:after{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;  
+        border-radius: 50%;
+        background: #F06933;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        z-index: -1;
+      }
+      
+    }
+  }
+
+.marker1 {
+    margin-left: 5%;
+    margin-top: 2%;
+    background-position: 3%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+}
+.marker2 {
+    margin-left: 25%;
+    margin-top: 22%;
+    background-position: 5%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: static;
+}
+.marker3 {
+    margin-left: 35%;
+    margin-top: 32%;
+    background-position: 7%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+}
+.marker4 {
+    margin-left: 45%;
+    margin-top: 42%;
+    background-position: 8%;
+    background-repeat: no-repeat;
+    position: absolute;
+}
+.marker5 {
+    margin-left: 55%;
+    margin-top: 52%;
+    background-repeat: no-repeat;
+    position: absolute;
+}

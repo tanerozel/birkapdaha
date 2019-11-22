@@ -6,7 +6,16 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content fullscreen >
-      <ion-label>Bağış Yap</ion-label>
-      <ion-img width="200" height="400" src="../../assets/map.png"></ion-img>
+<ion-content>
+  <div class="orderpage">
+    <img style="width: 100%;" src="../../assets/map.png" alt="">
+    <span (click)="openModal('hayvan')" style="left:8%; top: 10%;">1</span>
+    <span (click)="openModal('hayvan')" style="left:22%; top: 2%;">2</span>
+    <span (click)="openModal('hayvan')" style="left:21%; top: 35%;">3</span>
+    <span (click)="openModal('hayvan')" style="left:4%; top: 42%;">4</span>
+    <span (click)="openModal('hayvan')" style="left:12%; top: 61%;">5</span>
+    <span (click)="openModal('hayvan')" style="left:67%; top: 44%;">6</span>
+    <span (click)="openModal('hayvan')" style="left:35%; top: 81%;">7</span>
+    
+</div>
 </ion-content>
