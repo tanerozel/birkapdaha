@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+
 
 import * as firebase from "firebase";
 
@@ -15,7 +17,11 @@ export class LoginPage implements OnInit {
     password: ""
   };
 
-  constructor() { }
+  constructor(private route:Router) { }
+
+  home() {
+    this.route.navigateByUrl("/order-preparing");
+  }
 
   ngOnInit() {
     document.querySelector('ion-toolbar').style.background="#000";
