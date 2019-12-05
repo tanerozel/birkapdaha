@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./my-support.page.scss'],
 })
 export class MySupportPage implements OnInit {
-
+  public location = location;
   constructor() { }
 
   ngOnInit() {

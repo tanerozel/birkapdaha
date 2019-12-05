@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-
-
-import * as firebase from "firebase";
+import { AuthService } from '../auth.service'
+import { from } from 'rxjs';
+ 
 
 @Component({
   selector: 'app-login',
@@ -12,37 +12,26 @@ import * as firebase from "firebase";
 })
 export class LoginPage implements OnInit {
 
-  auth = {
-    email: "",
-    password: ""
-  };
+  constructor(private route: Router, public authService: AuthService) {
+ 
+    if (this.authService.isLoggedIn) {
+      this.route.navigateByUrl("/order-preparing");
+    }
 
-  constructor(private route:Router) { }
-
+  }
   home() {
     this.route.navigateByUrl("/order-preparing");
   }
 
   ngOnInit() {
-    document.querySelector('ion-toolbar').style.background="#000";
+    document.querySelector('ion-toolbar').style.background = "#000";
+    console.log(this.authService.isLoggedIn);
 
     //const color = el.style.getPropertyValue('--charcoal');
   }
 
 
-  login() {
-     
-    firebase.auth().signInWithEmailAndPassword(this.auth.email, this.auth.password).then(function (result) {
-      console.log(result);
-    })
-     .catch(function (error) {
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        debugger;
 
-      });
-
-  }
 
 
 
