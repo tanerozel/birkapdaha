@@ -41,7 +41,7 @@ export class AuthService {
         });
         this.SetUserData(result.user);
       }).catch((error) => {
-        window.alert(error.message)
+        window.alert('Kullanıcı adı veya şifre hatalı!')
       })
   }
 
