@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ActionSheetController, ModalController } from '@ionic/angular';
 import { Router } from '@angular/router';
 
+// Firebase App (the core Firebase SDK) is always required and must be listed first
+import * as firebase from "firebase";
+
 @Component({
   selector: 'app-orderp',
   templateUrl: 'orderPreparing.page.html',
@@ -48,13 +51,23 @@ export class OrderPreparing implements OnInit {
       text: 'Dolu',
       icon: 'trash',
       handler: () => {
-        this.route.navigateByUrl("/login");
+        var user = firebase.auth().currentUser;
+        if (user) {
+          this.route.navigateByUrl("/my-photos")
+        } else {
+          this.route.navigateByUrl("/login");
+        }
       }
     }, {
       text: 'Dop Dolu',
       icon: 'share',
       handler: () => {
-        this.route.navigateByUrl("/login");
+        var user = firebase.auth().currentUser;
+        if (user) {
+          this.route.navigateByUrl("/my-photos")
+        } else {
+          this.route.navigateByUrl("/login");
+        }
       }
     }];
     const actionSheet = await this.actionSheetController.create({
