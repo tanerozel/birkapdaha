@@ -1,12 +1,45 @@
 <ion-header>
   <ion-toolbar>
-      <ion-buttons slot="start">
-          <ion-menu-button></ion-menu-button>
-        </ion-buttons>
-    <ion-title>Profilim </ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-app> 
+  <ion-content fullscreen scroll-y="false">
+
+<div class="cards-container">
+  
+  <div class="card card-one" style="width: 100%;">
+    <header>
+      <div class="avatar">
+        <img src="{{photo}}" alt="Jhon Doe" />
+      </div>
+    </header>
+
+    <h3>{{name}}</h3>
+    <div class="desc">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit et cupiditate deleniti.
+    </div>
+    <div class="contacts">
+      <a href=""><i class="fa fa-plus"></i></a>
+      <a href=""><i class="fa fa-whatsapp"></i></a>
+      <a href=""><i class="fa fa-envelope"></i></a>
+      <div class="clear"></div>
+    </div>
+
+   
+  </div>
+
+  <div class="clear"></div>
+</div>
 
 </ion-content>
+<ion-footer no-shadow>
+<div style="background-color: #6473D0;height: 70px;">
+
+
+</div>
+</ion-footer>
+</ion-app> 
