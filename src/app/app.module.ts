@@ -13,7 +13,7 @@ import {Firbaseconfig }  from './firbaseconfig.enum';
 // Firebase App (the core Firebase SDK) is always required and must be listed first
 import * as firebase from "firebase";
 
-// firebase.initializeApp(Firbaseconfig);
+firebase.initializeApp(Firbaseconfig);
 
 //  firebase.auth().createUserWithEmailAndPassword("cemcakmaci@gmail.com", "2321011").catch(function(error) {
 //   Handle Errors here.
