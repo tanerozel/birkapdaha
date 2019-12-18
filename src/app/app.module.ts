@@ -8,36 +8,16 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import {Firbaseconfig }  from './firbaseconfig.enum';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
-// Firebase App (the core Firebase SDK) is always required and must be listed first
-import * as firebase from "firebase";
+import { environment } from '../environments/environment';
 
-firebase.initializeApp(Firbaseconfig);
+//import {Firbaseconfig }  from './firbaseconfig.enum';
 
-//  firebase.auth().createUserWithEmailAndPassword("cemcakmaci@gmail.com", "2321011").catch(function(error) {
-//   Handle Errors here.
-//   var errorCode = error.code;
-//   var errorMessage = error.message;
-//   debugger;
-//   ...
-// });
-
-// firebase.auth().signInWithEmailAndPassword("cemcakmaci@gmail.com", "2321011").then(function(result) {
-//   Handle Errors here.
-//    console.log(result);
-//   debugger;
-//   ...
-// })
-// .catch(function(error) {
-//   Handle Errors here.
-//   var errorCode = error.code;
-//   var errorMessage = error.message;
-
-//   debugger;
-//   ...
-// });
-
+import {AuthService} from "./auth.service"
+  
 
 @NgModule({
   declarations: [AppComponent],
@@ -45,12 +25,16 @@ firebase.initializeApp(Firbaseconfig);
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFirestoreModule
   ],
   providers: [
+    AuthService,
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },AuthService
     
   ],
   bootstrap: [AppComponent]

@@ -3,16 +3,24 @@
     <ion-menu contentId="main-content" type="overlay">
       <ion-header>
         <ion-toolbar>
-          <ion-title>Menu</ion-title>
+          <ion-title>Menu   </ion-title>
         </ion-toolbar>
       </ion-header>
       <ion-content>
         <ion-list>
-          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages" >
             <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
               <ion-icon slot="start" [name]="p.icon"></ion-icon>
               <ion-label class="menu-label">
                 {{p.title}}
+              <ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle auto-hide="false" *ngIf="authService.isLoggedIn" (click)="authService.SignOut()">
+            <ion-item  >
+              <ion-icon slot="start" name="log-out"></ion-icon>
+              <ion-label>
+              Çıkış Yap
               </ion-label>
             </ion-item>
           </ion-menu-toggle>
