@@ -19,7 +19,7 @@ export class AuthService {
     public ngZone: NgZone  
   ) {
 
-    //app yüklendiği zaman eğer üye login olmuşa herifi bilgilerini localstoge atıyoruz ve global her yerde kullanabiliyoruz
+    //app yüklendiği zaman eğer üye login olmuşa adamın bilgilerini localstoge atıyoruz ve global her yerde kullanabiliyoruz
     this.afAuth.authState.subscribe(user => {
       if (user) {
         this.userData = user;
@@ -41,7 +41,7 @@ export class AuthService {
         });
         this.SetUserData(result.user);
       }).catch((error) => {
-        window.alert(error.message)
+        window.alert('Kullanıcı adı veya şifre hatalı!')
       })
   }
 
