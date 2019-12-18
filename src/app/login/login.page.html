@@ -7,11 +7,7 @@
       <img src="../../assets/cat_dog.png" alt="Avatar" class="avatar">
     </div>
 
-    <input type="text" placeholder="E-Posta" name="email" #userName required>
-
-    <input type="password" placeholder="Şifre" name="password" #userPassword required>
-    <button  (click)="authService.SignIn(userName.value, userPassword.value)" type="submit">Giriş Yap</button>
-    <p style="text-align: center;">veya</p>
+    
     <button (click)="authService.FacebookAuth()" style="background-color:#3b5998" ion-button icon-start>
       <ion-icon name="logo-facebook"></ion-icon>
       Facebook
