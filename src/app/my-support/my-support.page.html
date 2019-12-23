@@ -6,7 +6,14 @@
     <ion-title>Desteklerim </ion-title>
   </ion-toolbar>
 </ion-header>
-{{location}}
 <ion-content>
-
+ 
+<ion-list lines="full">
+  <ion-item *ngFor="let order of orderList">
+    <ion-thumbnail slot="start">
+      <ion-img [src]="order.photo"></ion-img>
+    </ion-thumbnail>
+    <ion-label>{{order.description}}</ion-label>
+  </ion-item>
+</ion-list>
 </ion-content>

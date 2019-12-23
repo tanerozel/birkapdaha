@@ -1,11 +1,11 @@
 export interface Orders {
-    userId : number,
+    userId : string,
     photo:string,
     createDate:Date,
     amount:number,
     updateDate:Date
     description:string,
     location:string,
-    status:""   
+    status:string
 
 }

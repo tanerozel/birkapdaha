@@ -17,8 +17,8 @@ export class AppService {
     return this.afs.collection('orders').add(orders);
    }
 
-   getUserOrders(userId:number){
-
+   getUserOrders(userId:string){  
+    return this.afs.collection<Orders>('orders', ref => ref.where('userId', '==', userId)).valueChanges();
    }
 
 
